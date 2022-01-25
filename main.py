@@ -9,6 +9,7 @@ class Instance:
     build: 2.14
     '''
     
+    
     def __init__(self, key = 0):
         import sys
         self.key = key
@@ -86,87 +87,3 @@ class Instance:
             print("Error cannot make triangle. Angles do not add up to 180. You need the angles to add to 180. Please try again.")
         else:
             print("Key Invalid Please get a key")
- 
-
-
-def main():
-    #instanceCOMMANDLINE made by: Trey Fleishman
-    #copyright: Trey Fleishman 2021
-    #This code is reserved under the non-comercial no derivs creative commons liscence and may not be used commerically under any circumstances except with written permission fronm the developer
-    #Since this code is reserved under the non-comercial no derivs creative commons liscence, you may also not distribute any re-builds or build upons at any time except with written permision from the devloper
-    #Legal code( https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode ), Human Readable Code( https://creativecommons.org/licenses/by-nc-nd/4.0/ )
-    #build: 1.16
-    instance = Instance(127387892721)
-    instance.changeturtleval("visible", True)
-    killLoop = 0
-    while killLoop == 0:
-        ui = input("What command would you like to issue?")
-        if not("help" in ui or ui == "whatIsInstance" or ui == "makeBox" or "changeVar" in ui or ui == "makeTriangle" or "say" in ui or ui == "killLoop"):
-             print(instance.commandNotValid)
-        elif(ui == "help"):
-            print(instance.help)
-        elif("help" in ui):
-            helplength = len(ui)
-            helpcommand = ui[5:helplength]
-            if(helpcommand == "makeBox"):
-                print(instance.helpMakeBox)
-            elif(helpcommand == "makeTriangle"):
-              print(instance.helpMakeTriangle)
-            elif(helpcommand == "changeVar"):
-              print(instance.helpchangevar)
-            elif(helpcommand == "help"):
-                print(instance.helpHelp)
-        elif(ui == "whatIsInstance"):
-            print(instance.whatIsInstance)
-        elif(ui == "makeBox"): #change back to makeBox
-            instance.makeBox()
-        elif(ui == "makeTriangle"):
-            instance.makeTriangle()
-        elif "say" in ui: #sees if we have pulled the print command
-            if not ui == "say Hi" or ui == "Hi":
-              wordLength = len(ui)
-              word = ui[4:wordLength]
-              print(word)
-        elif(ui == "killLoop"):
-            print("Killing loop...") #loop escape
-            killLoop = 1
-        elif "changeVar" in ui: #finds "changeVar" in a string
-          varToChange = input("What variable should I change?")
-          changeToBlank = input("What should I change: " + varToChange + " to?")
-          if(varToChange == "boxSide1"):
-              print("changing...")
-              instance.boxSide1 = changeToBlank
-          elif(varToChange == "boxSide2"):
-              print("changing...")
-              instance.boxSide2 = changeToBlank
-          elif(varToChange == "turtleColor"):
-            print("changing...")
-            instance.turtleColor = changeToBlank
-          elif(varToChange == "turtleSpeed"):
-            print("changing...")
-            instance.turtleSpeed = changeToBlank
-          elif(varToChange == "triangleSide1"):
-            print("changing...")
-            instance.triangle1 = changeToBlank
-          elif(varToChange == "triangleSide2"):
-            print("changing...")
-            instance.triangle2 = changeToBlank
-          elif(varToChange == "triangleSide3"):
-            print("changing...")
-            instance.triangle3 = changeToBlank
-          elif(varToChange == "triangleAngle1"):
-            print("changing...")
-            instance.angle1 = changeToBlank
-            instance.angleI1 = (float(changeToBlank) * 2.5)
-          elif(varToChange == "triangleAngle2"):
-            print("changing...")
-            instance.angle2 = changeToBlank
-            instance.angleI2 = (float(changeToBlank) * 2.5)
-          elif(varToChange == "triangleAngle3"):
-            print("changing...")
-            instance.angle3 = changeToBlank
-            instance.angleI3 = (float(changeToBlank) * 2.5)
-          else:
-            print(instance.variablenotfoundforchangevar)
-          
-main()
