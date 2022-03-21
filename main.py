@@ -1,6 +1,6 @@
 class Instance:
     '''
-    instanceMODULE made by: Trey Fleishman
+    instanceMODULE made by: Bob
     copyright: Trey Fleishman 2021
     This code is reserved under the non-comercial no derivs creative commons liscence and may not be used commerically under any circumstances except with written permission fronm the developer
     Since this code is reserved under the non-comercial no derivs creative commons liscence, you may also not distribute any re-builds or build upons at any time except with written permision from the devloper
